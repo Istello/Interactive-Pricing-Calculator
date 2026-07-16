@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instant Quote Estimator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="calculator-card">
+        <!-- HEADER -->
+        <header class="hero-section">
+            <span class="hero-badge">
+                Instant Estimator
+            </span>
+            <h1 id="business-title">
+                Calculate Your Clean
+            </h1>
+            <p>
+                Configure your space and receive an instant estimate.
+            </p>
+        </header>
+        
+        <!-- BODY -->
+        <main class="calculator-body">
+            <!-- Progress -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span>4 Easy Steps</span>
+            </div>
+            
+            <!-- Step 1 -->
+            <section>
+                <h2>
+                    Step 1 • Home Size
+                </h2>
+                <div class="counter-grid">
+                  
+                    <!-- Bedrooms -->
+                    <div class="counter-card">
+                        <span class="counter-label">
+                            Bedrooms
+                        </span>
+                        <div class="counter-controls">
+                            <button onclick="updateRooms(-1)">
+                                −
+                            </button>
+                            <span id="rooms-display">
+                                2
+                            </span>
+                            <button onclick="updateRooms(1)">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Bathrooms -->
+                    <div class="counter-card">
+                        <span class="counter-label">
+                            Bathrooms
+                        </span>
+                        <div class="counter-controls">
+                            <button onclick="updateBaths(-1)">
+                                −
+                            </button>
+                            <span id="baths-display">
+                                1
+                            </span>
+                            <button onclick="updateBaths(1)">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 2 -->
+            <section>
+                <h2>
+                    Step 2 • Service Type
+                </h2>
+                <div
+                    id="intensity-container"
+                    class="service-grid">
+                </div>
+            </section>
+
+            <!-- Step 3 -->
+            <section>
+                <h2>
+                    Step 3 • Add-ons
+                </h2>
+                <div
+                    id="addons-container"
+                    class="addons-grid">
+                </div>
+            </section>
+
+            <!-- Step 4 -->
+            <section>
+                <h2>
+                    Step 4 • Frequency
+                </h2>
+                <div
+                    id="frequency-container"
+                    class="frequency-grid">
+                </div>
+           </section>
+        </main>
+
+        <!-- PRICE BAR  -->
+        <footer class="price-bar">
+            <div>
+                <small>
+                    Estimated Price
+                </small>
+                <h3>
+                    $
+                    <span id="total-price">
+                        0
+                    </span>
+                </h3>
+                <p>
+                    Per Clean
+                </p>
+            </div>
+            <button
+                class="book-btn"
+                onclick="sendWhatsAppMessage()">
+                <svg
+                    class="whatsapp-icon"
+                    viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.436 2.5 1.163 3.475l-.759 2.766 2.834-.743c.937.511 2.011.802 3.153.801 3.18 0 5.765-2.586 5.766-5.765 0-3.18-2.585-5.766-5.766-5.766zm3.439 8.19c-.149.42-.767.766-1.139.813-.342.043-.77.067-2.222-.534-1.857-.768-3.04-2.656-3.133-2.778-.093-.122-.806-.968-.806-1.847 0-.879.456-1.312.619-1.479.163-.167.356-.21.474-.21.118 0 .237-.001.339.004.108.005.253-.041.395.3.149.356.508 1.239.552 1.328.044.09.073.193.014.308-.059.119-.089.193-.178.297-.089.103-.187.23-.267.308-.09.088-.184.184-.079.362.105.178.468.771.996 1.242.68.608 1.252.797 1.431.886.178.09.282.074.386-.044.104-.119.445-.519.564-.697.119-.178.238-.149.396-.09.158.059 1.001.475 1.179.564.178.09.297.134.341.208.045.074.045.426-.104.846z"/>
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 2.01.593 3.88 1.61 5.45L2 22l4.72-1.55C8.19 21.32 10.02 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.74 0-3.41-.53-4.82-1.52l-.35-.24-2.85.93.95-2.78-.26-.38C3.65 14.7 3 12.92 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/>
+                </svg>
+                Book Clean
+            </button>
+        </footer>
+    </div>
+</div>
+
+<script src="App.js"></script>
+
+</body>
+</html>
