@@ -11,7 +11,7 @@ This frontend tool eliminates manual quoting by letting customers estimate their
 * **Easily Customizable:** Configured via a simple JSON-like configuration block to quickly change pricing, services, and add-ons.
 
 ## 🚀 Live Demo
-Check out the live interactive demo here: **[INSERT YOUR VERCEL / GITHUB PAGES LINK HERE]**
+Check out the live interactive demo here: https://interactive-pricing-calculator-three.vercel.app
 
 ## 🛠️ How to Customize for Your Business
 To change the pricing structure, brand name, or target WhatsApp phone number, simply edit the `CLIENT_CONFIG` and `PRICING_RULES` constants in the `<script>` tag of the `index.html` file.
